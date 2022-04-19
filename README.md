@@ -6,6 +6,8 @@ Changing the file so that a field is set to "false" will hide that field. Fields
 ## Known Issues
 Removing certain fields will remove the field, but not the field name. This seems to occur mostly in sections where multiple fields are displayed on one line.
 
+![Field name appears despite field being taken out](pictures/missing-field.png)
+
 ## Identifiers
 mdEditor uses three separate field names to represent identifier sections: "identifier", "identifierSimple", and "identifierShort".
 
