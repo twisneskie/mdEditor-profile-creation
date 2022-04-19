@@ -23,7 +23,7 @@
         },
         "pointOfContact": {
           "role": true,
-          "contacts": false
+          "contacts": true
         },
         "citation": {
           "basicInformation": {
@@ -33,11 +33,11 @@
               "dateItem": {
                 "date": true,
                 "dateType": true,
-                "description": true
+                "description": false
               }
             },
-            "edition": true,
-            "presentationForm": true
+            "edition": false,
+            "presentationForm": false
           },
           "responsibleParty": {
             "role": true,
@@ -45,10 +45,10 @@
           },
           "onlineResource": {
             "name": true,
-            "url": true,
+            "url": false,
             "protocol": true,
             "description": true,
-            "onlineFunction": true,
+            "onlineFunction": false,
             "applicationProfile": true,
             "protocolRequest": true
           },
@@ -107,14 +107,14 @@
           },
           "identifierShort": true,
           "series": {
-            "name": true,
+            "name": false,
             "issue": true,
             "page": true
           },
-          "otherCitationDetails": true,
+          "otherCitationDetails": false,
           "graphic": {
             "fileName": true,
-            "fileType": true,
+            "fileType": false,
             "fileDescription": true,
             "onlineResource": {
               "name": true,
