@@ -2,8 +2,8 @@
   "identifier": "full-profile-outline",
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
-  "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'false' will hide that field.",
-  "version": "0.0.8",
+  "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
+  "version": "0.0.9",
   "components": {
     "record": {
       "main": {
@@ -33,11 +33,11 @@
               "dateItem": {
                 "date": true,
                 "dateType": true,
-                "description": false
+                "description": true
               }
             },
-            "edition": false,
-            "presentationForm": false
+            "edition": true,
+            "presentationForm": true
           },
           "responsibleParty": {
             "role": true,
@@ -45,10 +45,10 @@
           },
           "onlineResource": {
             "name": true,
-            "url": false,
+            "url": true,
             "protocol": true,
             "description": true,
-            "onlineFunction": false,
+            "onlineFunction": true,
             "applicationProfile": true,
             "protocolRequest": true
           },
@@ -107,14 +107,14 @@
           },
           "identifierShort": true,
           "series": {
-            "name": false,
+            "name": true,
             "issue": true,
             "page": true
           },
-          "otherCitationDetails": false,
+          "otherCitationDetails": true,
           "graphic": {
             "fileName": true,
-            "fileType": false,
+            "fileType": true,
             "fileDescription": true,
             "onlineResource": {
               "name": true,
@@ -129,7 +129,10 @@
         },
         "description": {
           "abstract": true,
-          "shortAbstract": true
+          "shortAbstract": true,
+          "purpose": false,
+          "supplementalInfo": false,
+          "environmentDescription": false
         },
         "purpose": true,
         "supplementalInfo": true,
