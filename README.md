@@ -9,4 +9,6 @@ Removing certain fields will remove the field, but not the field name. This seem
 ## Identifiers
 mdEditor uses three separate field names to represent identifier sections: "identifier", "identifierSimple", and "identifierShort". identifierShort is the most obvious difference. It displays fewer fields than identifier or identifierSimple: just Identifier, Namespace, Version, and Description. Identifier and identifierSimple both show all of the identifier fields (all listed above + authority), but change how mdEditor actually displays them. identifierSimple shows the identifier subsection as a pop-up window while identifier brings you to a separate page to fill out the subsection.
 
-This full profile outline sets all three types of identifier sections to "true". 
+This full profile outline sets all three types of identifier sections to "true", resulting in three identifier sections when using this profile definition.
+
+In nearly every instance where there is a choice between the three options, identifier will be the default (exceptions include: Taxonomy/Taxonomic System/Citation/Identifier and Documents/Identifier which both have identifierSimple as the default). 
