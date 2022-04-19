@@ -49,6 +49,59 @@
             "applicationProfile": true,
             "protocolRequest": true
           },
+          "identifier": {
+            "identifier": true,
+            "namespace": true,
+            "version": true,
+            "description": true,
+            "authority": {
+              "basicInformation": {
+                "title": true,
+                "alternateTitle": true,
+                "date": true,
+                "dateArray": {
+                  "date": true,
+                  "dateType": true,
+                  "description": true
+                }
+              },
+              "responsibleParty": {
+                "role": true,
+                "contacts": true
+              },
+              "onlineResource": {
+                "name": true,
+                "url": true,
+                "protocol": true,
+                "description": true,
+                "onlineFunction": true,
+                "applicationProfile": true,
+                "protocolRequest": true
+              },
+              "identifier": true,
+              "identifierSimple": true,
+              "identifierShort": true
+            }
+          },
+          "identifierSimple": {
+            "identifier": true,
+            "namespace": true,
+            "version": true,
+            "description": true,
+            "authority": {
+              "basicInformation": {
+                "title": true,
+                "alternateTitle": true,
+                "date": true,
+                "dateArray": true
+              },
+              "responsibleParty": true,
+              "onlineResource": true,
+              "identifier": true,
+              "identifierSimple": true,
+              "identifierShort": true
+            }
+          },
           "identifierShort": true,
           "series": {
             "name": true,
