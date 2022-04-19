@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'false' will hide that field.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "components": {
     "record": {
       "main": {
