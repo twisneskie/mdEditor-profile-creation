@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "components": {
     "record": {
       "main": {
@@ -1114,19 +1114,19 @@
       "funding": {
         "fundingPeriod": {
           "allocation": {
-            "amount": false,
-            "currency": false,
-            "sourceAllocationId": false,
-            "source": false,
-            "recipient": false,
+            "amount": true,
+            "currency": true,
+            "sourceAllocationId": true,
+            "source": true,
+            "recipient": true,
             "otherContacts": {
-              "role": false,
-              "contacts": false
+              "role": true,
+              "contacts": true
             },
-            "matching": false,
-            "comment": false,
+            "matching": true,
+            "comment": true,
             "onlineResource": {
-              "name": false,
+              "name": true,
               "url": true,
               "protocol": true,
               "description": true,
@@ -1135,10 +1135,10 @@
               "protocolRequest": true
             }
           },
-          "description": false,
+          "description": true,
           "timePeriod": {
             "dateRange": {
-              "start": false,
+              "start": true,
               "end": true,
               "fiscalyear": true
             },
@@ -1161,7 +1161,7 @@
         }
       }
     },
-    "contact": true,
+    "contact": false,
     "dictionary": {
       "main": {
         "basicInformation": {
