@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "components": {
     "record": {
       "main": {
@@ -771,7 +771,7 @@
       "taxonomy": {
         "collection": {
           "taxonomicSystem": {
-            "modifications": false,
+            "modifications": true,
             "citation": {
               "title": true,
               "basicInformation": {
@@ -839,20 +839,20 @@
               "taxonomicLevel": false,
               "taxonomicName": false,
               "taxonomicSystemId": false,
-              "commonName": true
+              "commonName": false
             }
           },
           "observer": {
-            "role": false,
+            "role": true,
             "contacts": true
           },
-          "generalScope": false,
-          "identificationProcedure": false,
-          "identificationCompleteness": false,
+          "generalScope": true,
+          "identificationProcedure": true,
+          "identificationCompleteness": true,
           "voucher": {
-            "specimen": false,
+            "specimen": true,
             "repository": {
-              "role": false,
+              "role": true,
               "contacts": true
             }
           }
