@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "components": {
     "record": {
       "main": {
@@ -525,12 +525,12 @@
       "lineage": {
         "statement": true,
         "processStep": {
-          "stepId": false,
-          "description": false,
-          "stepSource": false,
-          "stepProduct": false,
-          "processor": false,
-          "stepReference": false,
+          "stepId": true,
+          "description": true,
+          "stepSource": true,
+          "stepProduct": true,
+          "processor": true,
+          "stepReference": true,
           "timePeriod": {
             "dateRange": {
               "start": true,
@@ -543,16 +543,16 @@
             "duration": true,
             "scope": true
           },
-          "scope": false
+          "scope": true
         },
         "source": {
-          "description": true,
-          "sourceId": true,
-          "scope": true,
+          "sourceId": false,
+          "description": false,
+          "scope": false,
           "sourceCitation": {
             "basicInformation": {
-              "title": true,
-              "alternateTitle": true,
+              "title": false,
+              "alternateTitle": false,
               "dates": {
                 "dateItem": {
                   "date": true,
@@ -589,7 +589,7 @@
           },
           "metadataCitation": {
             "basicInformation": {
-              "title": true,
+              "title": false,
               "alternateTitle": true,
               "dates": {
                 "dateItem": {
@@ -634,12 +634,12 @@
             "identifierShort": true
           },
           "referenceSystem": {
-            "referenceSystemType": true,
+            "referenceSystemType": false,
             "referenceSystemIdentifier": {
-              "identifier": true,
-              "namespace": true,
-              "version": true,
-              "description": true,
+              "identifier": false,
+              "namespace": false,
+              "version": false,
+              "description": false,
               "authority": {
                 "basicInformation": {
                   "title": true,
@@ -655,18 +655,18 @@
             }
           },
           "spatialResolution": {
-            "scaleFactor": true,
-            "levelOfDetail": true,
+            "scaleFactor": false,
+            "levelOfDetail": false,
             "measure": {
-              "type": true,
-              "value": true,
-              "units": true
+              "type": false,
+              "value": false,
+              "units": false
             }
           }
         },
         "citation": {
           "basicInformation": {
-            "title": true,
+            "title": false,
             "alternateTitle": true,
             "dates": {
               "dateItem": {
@@ -766,7 +766,7 @@
             }
           }
         },
-        "scope": true
+        "scope": false
       },
       "taxonomy": {
         "collection": {
