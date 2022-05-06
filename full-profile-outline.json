@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.0.18",
+  "version": "0.6.0",
   "components": {
     "record": {
       "main": {
@@ -535,7 +535,7 @@
             "dateRange": {
               "start": true,
               "end": true,
-              "fiscalyear": false
+              "fiscalyear": true
             },
             "identifier": true,
             "periodName": true,
@@ -546,13 +546,13 @@
           "scope": true
         },
         "source": {
-          "sourceId": false,
-          "description": false,
-          "scope": false,
+          "sourceId": true,
+          "description": true,
+          "scope": true,
           "sourceCitation": {
             "basicInformation": {
-              "title": false,
-              "alternateTitle": false,
+              "title": true,
+              "alternateTitle": true,
               "dates": {
                 "dateItem": {
                   "date": true,
@@ -589,7 +589,7 @@
           },
           "metadataCitation": {
             "basicInformation": {
-              "title": false,
+              "title": true,
               "alternateTitle": true,
               "dates": {
                 "dateItem": {
@@ -634,12 +634,12 @@
             "identifierShort": true
           },
           "referenceSystem": {
-            "referenceSystemType": false,
+            "referenceSystemType": true,
             "referenceSystemIdentifier": {
-              "identifier": false,
-              "namespace": false,
-              "version": false,
-              "description": false,
+              "identifier": true,
+              "namespace": true,
+              "version": true,
+              "description": true,
               "authority": {
                 "basicInformation": {
                   "title": true,
@@ -655,18 +655,18 @@
             }
           },
           "spatialResolution": {
-            "scaleFactor": false,
-            "levelOfDetail": false,
+            "scaleFactor": true,
+            "levelOfDetail": true,
             "measure": {
-              "type": false,
-              "value": false,
-              "units": false
+              "type": true,
+              "value": true,
+              "units": true
             }
           }
         },
         "citation": {
           "basicInformation": {
-            "title": false,
+            "title": true,
             "alternateTitle": true,
             "dates": {
               "dateItem": {
@@ -766,11 +766,12 @@
             }
           }
         },
-        "scope": false
+        "scope": true
       },
       "taxonomy": {
         "collection": {
           "taxonomicSystem": {
+            "modifications": false,
             "citation": {
               "title": true,
               "basicInformation": {
@@ -831,28 +832,27 @@
                 "fileDescription": true,
                 "onlineResource": true
               }
-            },
-            "modifications": true
+            }
           },
           "classification": {
             "taxon": {
-              "taxonomicLevel": true,
-              "taxonomicName": true,
-              "taxonomicSystemId": true,
+              "taxonomicLevel": false,
+              "taxonomicName": false,
+              "taxonomicSystemId": false,
               "commonName": true
             }
           },
           "observer": {
-            "role": true,
+            "role": false,
             "contacts": true
           },
-          "generalScope": true,
-          "identificationProcedure": true,
-          "identificationCompleteness": true,
+          "generalScope": false,
+          "identificationProcedure": false,
+          "identificationCompleteness": false,
           "voucher": {
-            "specimen": true,
+            "specimen": false,
             "repository": {
-              "role": true,
+              "role": false,
               "contacts": true
             }
           }
