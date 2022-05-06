@@ -6,10 +6,26 @@ Changing the file so that a field is set to "false" will hide that field. Fields
 Access the Full Profile Outline Here:
 https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/full-profile-outline.json
 
-## Known Issues
+# Add a profile definition to mdEditor
+1. Go to Settings/Profiles/Manage Definitions.
+2. Select "Add Definition".
+3. Select "Imported" tab.
+3. Enter URL to profile definition.
+4. Enter an optional alias (the alias replaces the definition title).
+5. Select "Save definition". You should receive a notification that the profile has been downloaded and profile information will be displayed on the tab.
+
+# Add profile for use by mdEditor
+1. Go to Settings/Profiles.
+2. Select "Add Profile".
+3. Enter a "Title" (displayed in profile selection field). 1. Select a "Profile Definition" from dropdown list (either the definition title or the alias entered in the previous step will be displayed). 1. And optional description (displayed when cursor hovers over "?" in the profile selection field).
+4. Identify a schema from the "Selected Schema" list and select "Add" (NOTE: Skip this step for testing. You will see a "No schemas have been assigned" warning, just ignore that for now!).
+5. Select "Save Profile".
+Notes: Changes made to a existing profile may not be reflected until the editor is reloaded.
+
+# Known Issues
 See [Issues](https://github.com/twisneskie/mdEditor-profile-creation/issues) for the known list of fields and sections that don't function as expected. If you encounter any errors when using the full profile, please submit an Issue.
 
-## Identifiers
+# Identifiers
 mdEditor uses three separate field names to represent identifier sections: "identifier", "identifierSimple", and "identifierShort".
 
 identifierShort is the most obvious difference. It displays fewer fields than identifier or identifierSimple: just Identifier, Namespace, Version, and Description.
