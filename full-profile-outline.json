@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "components": {
     "record": {
       "main": {
@@ -917,25 +917,25 @@
         }
       },
       "constraints": {
-        "type": false,
-        "useLimitation": false,
+        "type": true,
+        "useLimitation": true,
         "legal": {
-          "accessConstraint": false,
-          "useConstraint": false,
-          "otherConstraint": false
+          "accessConstraint": true,
+          "useConstraint": true,
+          "otherConstraint": true
         },
         "security": {
-          "classification": false,
-          "classificationSystem": false,
-          "note": false,
-          "handlingDescription": false
+          "classification": true,
+          "classificationSystem": true,
+          "note": true,
+          "handlingDescription": true
         },
         "responsibleParty": {
-          "role": false,
+          "role": true,
           "contacts": true
         },
         "graphic": {
-          "fileName": false,
+          "fileName": true,
           "fileType": true,
           "fileDescription": true,
           "onlineResource": {
@@ -950,11 +950,11 @@
         }
       },
       "associated": {
-        "associationType": true,
-        "initiativeType": true,
+        "associationType": false,
+        "initiativeType": false,
         "resourceCitation": {
           "basicInformation": {
-            "title": true,
+            "title": false,
             "alternateTitle": true,
             "dates": {
               "dateItem": {
@@ -966,7 +966,6 @@
             "edition": true,
             "presentationForm": true
           },
-          "identifier": true,
           "responsibleParty": {
             "role": true,
             "contacts": true
@@ -980,6 +979,7 @@
             "applicationProfile": true,
             "protocolRequest": true
           },
+          "identifier": true,
           "identifierSimple": {
             "identifier": true,
             "namespace": true,
