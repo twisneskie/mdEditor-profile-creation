@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "components": {
     "record": {
       "main": {
@@ -1161,7 +1161,6 @@
         }
       }
     },
-    "contact": false,
     "dictionary": {
       "main": {
         "basicInformation": {
@@ -1242,22 +1241,22 @@
         }
       },
       "entity": {
-        "information": true,
-        "identifier": true,
-        "codeName": true,
-        "definition": true,
-        "commonName": true,
-        "alias": true,
+        "information": false,
+        "identifier": false,
+        "codeName": false,
+        "definition": false,
+        "commonName": false,
+        "alias": false,
         "structure": {
-          "fieldSeparatorCharacter": true,
-          "numberOfHeaderLines": true,
-          "quoteCharacter": true
+          "fieldSeparatorCharacter": false,
+          "numberOfHeaderLines": false,
+          "quoteCharacter": false
         },
-        "keys": true,
-        "index": true,
+        "keys": false,
+        "index": false,
         "entityReference": {
-          "basicInformation": true,
-          "title": true,
+          "basicInformation": false,
+          "title": false,
           "alternateTitle": true,
           "date": true,
           "edition": true,
@@ -1272,44 +1271,44 @@
             "issue": true,
             "page": true
           },
-          "otherCitationDetails": true,
-          "graphicOverview": true
+          "otherCitationDetails": false,
+          "graphicOverview": false
         },
         "attribute": {
-          "name": true,
-          "dataType": true,
-          "definition": true,
-          "allowNull": true,
+          "name": false,
+          "dataType": false,
+          "definition": false,
+          "allowNull": false,
           "information": {
-            "codeName": true,
-            "definition": true,
-            "dataType": true,
-            "allowNull": true,
-            "commonName": true,
-            "domain": true,
-            "alias": true,
-            "units": true,
-            "unitsResolution": true,
-            "caseSensitive": true,
-            "fieldWidth": true,
-            "missingValue": true,
-            "minValue": true,
-            "maxValue": true
+            "codeName": false,
+            "definition": false,
+            "dataType": false,
+            "allowNull": false,
+            "commonName": false,
+            "domain": false,
+            "alias": false,
+            "units": false,
+            "unitsResolution": false,
+            "caseSensitive": false,
+            "fieldWidth": false,
+            "missingValue": false,
+            "minValue": false,
+            "maxValue": false
           },
-          "valueRange": true,
-          "timePeriod": true,
+          "valueRange": false,
+          "timePeriod": false,
           "attributeReference": {
-            "basicInformation": true,
-            "title": true,
-            "alternateTitle": true,
-            "date": true,
-            "edition": true,
-            "presentationForm": true,
-            "responsibleParty": true,
-            "onlineResource": true,
-            "identifier": true,
-            "identifierSimple": true,
-            "identifierShort": true,
+            "basicInformation": false,
+            "title": false,
+            "alternateTitle": false,
+            "date": false,
+            "edition": false,
+            "presentationForm": false,
+            "responsibleParty": false,
+            "onlineResource": false,
+            "identifier": false,
+            "identifierSimple": false,
+            "identifierShort": false,
             "series": {
               "name": true,
               "issue": true,
@@ -1321,7 +1320,7 @@
         },
         "citation": {
           "identifier": {
-            "identifier": true,
+            "identifier": false,
             "namespace": true,
             "version": true,
             "description": true,
