@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "components": {
     "record": {
       "main": {
@@ -860,16 +860,16 @@
         "classificationPreview": true
       },
       "distribution": {
-        "description": false,
-        "liablityStatement": false,
+        "description": true,
+        "liablityStatement": true,
         "distributor": {
-          "contacts": false,
-          "role": false,
+          "contacts": true,
+          "role": true,
           "transferOption": {
-            "transferSize": false,
-            "distributionUnit": false,
+            "transferSize": true,
+            "distributionUnit": true,
             "onlineOption": {
-              "name": false,
+              "name": true,
               "url": true,
               "protocol": true,
               "description": true,
@@ -878,29 +878,29 @@
               "protocolRequest": true
             },
             "offlineOption": {
-              "mediumTitle": false,
+              "mediumTitle": true,
               "storage": {
-                "density": false,
-                "units": false,
-                "numberOfVolumes": false,
-                "format": false
+                "density": true,
+                "units": true,
+                "numberOfVolumes": true,
+                "format": true
               },
               "identifier": {
-                "identifier": false,
+                "identifier": true,
                 "namespace": true,
                 "version": true,
                 "description": true
               },
-              "note": false
+              "note": true
             },
             "distributionFormat": {
-              "name": false,
-              "version": false,
-              "compressionMethod": false,
-              "url": false
+              "name": true,
+              "version": true,
+              "compressionMethod": true,
+              "url": true
             },
             "transferFrequency": {
-              "years": false,
+              "years": true,
               "months": true,
               "days": true,
               "hours": true,
@@ -909,33 +909,33 @@
             }
           },
           "orderProcess": {
-            "fees": false,
-            "plannedAvailability": false,
-            "orderingInstructions": false,
-            "turnaround": false
+            "fees": true,
+            "plannedAvailability": true,
+            "orderingInstructions": true,
+            "turnaround": true
           }
         }
       },
       "constraints": {
-        "type": true,
-        "useLimitation": true,
+        "type": false,
+        "useLimitation": false,
         "legal": {
-          "accessConstraint": true,
-          "useConstraint": true,
-          "otherConstraint": true
+          "accessConstraint": false,
+          "useConstraint": false,
+          "otherConstraint": false
         },
         "security": {
-          "classification": true,
-          "classificationSystem": true,
-          "note": true,
-          "handlingDescription": true
+          "classification": false,
+          "classificationSystem": false,
+          "note": false,
+          "handlingDescription": false
         },
         "responsibleParty": {
-          "role": true,
+          "role": false,
           "contacts": true
         },
         "graphic": {
-          "fileName": true,
+          "fileName": false,
           "fileType": true,
           "fileDescription": true,
           "onlineResource": {
