@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "components": {
     "record": {
       "main": {
@@ -1039,12 +1039,12 @@
       },
       "documents": {
         "resourceType": {
-          "resourceType": false,
+          "resourceType": true,
           "name": true
         },
         "citation": {
           "basicInformation": {
-            "title": false,
+            "title": true,
             "alternateTitle": true,
             "dates": {
               "dateItem": {
@@ -1114,19 +1114,19 @@
       "funding": {
         "fundingPeriod": {
           "allocation": {
-            "amount": true,
-            "currency": true,
-            "sourceAllocationId": true,
-            "source": true,
-            "recipient": true,
+            "amount": false,
+            "currency": false,
+            "sourceAllocationId": false,
+            "source": false,
+            "recipient": false,
             "otherContacts": {
-              "role": true,
-              "contacts": true
+              "role": false,
+              "contacts": false
             },
-            "matching": true,
-            "comment": true,
+            "matching": false,
+            "comment": false,
             "onlineResource": {
-              "name": true,
+              "name": false,
               "url": true,
               "protocol": true,
               "description": true,
@@ -1135,10 +1135,10 @@
               "protocolRequest": true
             }
           },
-          "description": true,
+          "description": false,
           "timePeriod": {
             "dateRange": {
-              "start": true,
+              "start": false,
               "end": true,
               "fiscalyear": true
             },
