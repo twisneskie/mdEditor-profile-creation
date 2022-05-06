@@ -3,7 +3,7 @@
   "namespace": "gov.fws.profile",
   "title": "Full Profile",
   "description": "Contains all possible fields in mdEditor, set to be diplayed. Changing any field from 'true' to 'true' will hide that field.",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "components": {
     "record": {
       "main": {
@@ -835,7 +835,12 @@
             }
           },
           "classification": {
-            "taxon": false
+            "taxon": {
+              "taxonomicLevel": true,
+              "taxonomicName": true,
+              "taxonomicSystemId": true,
+              "commonName": true
+            }
           },
           "observer": {
             "role": true,
@@ -852,19 +857,19 @@
             }
           }
         },
-        "classificationPreview": false
+        "classificationPreview": true
       },
       "distribution": {
-        "description": true,
-        "liablityStatement": true,
+        "description": false,
+        "liablityStatement": false,
         "distributor": {
-          "contacts": true,
-          "role": true,
+          "contacts": false,
+          "role": false,
           "transferOption": {
-            "transferSize": true,
-            "distributionUnit": true,
+            "transferSize": false,
+            "distributionUnit": false,
             "onlineOption": {
-              "name": true,
+              "name": false,
               "url": true,
               "protocol": true,
               "description": true,
@@ -873,29 +878,29 @@
               "protocolRequest": true
             },
             "offlineOption": {
-              "mediumTitle": true,
+              "mediumTitle": false,
               "storage": {
-                "density": true,
-                "units": true,
-                "numberOfVolumes": true,
-                "format": true
+                "density": false,
+                "units": false,
+                "numberOfVolumes": false,
+                "format": false
               },
               "identifier": {
-                "identifier": true,
+                "identifier": false,
                 "namespace": true,
                 "version": true,
                 "description": true
               },
-              "note": true
+              "note": false
             },
             "distributionFormat": {
-              "name": true,
-              "version": true,
-              "compressionMethod": true,
-              "url": true
+              "name": false,
+              "version": false,
+              "compressionMethod": false,
+              "url": false
             },
             "transferFrequency": {
-              "years": true,
+              "years": false,
               "months": true,
               "days": true,
               "hours": true,
@@ -904,10 +909,10 @@
             }
           },
           "orderProcess": {
-            "fees": true,
-            "plannedAvailability": true,
-            "orderingInstructions": true,
-            "turnaround": true
+            "fees": false,
+            "plannedAvailability": false,
+            "orderingInstructions": false,
+            "turnaround": false
           }
         }
       },
