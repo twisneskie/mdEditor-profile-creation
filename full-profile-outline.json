@@ -525,7 +525,7 @@
       "lineage": {
         "statement": true,
         "processStep": {
-          "stepIdentifier": false,
+          "stepId": false,
           "stepProduct": true,
           "description": true,
           "stepSource": true,
