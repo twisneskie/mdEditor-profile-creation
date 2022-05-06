@@ -4,9 +4,7 @@ The full profile outline (full-profile-outline.json) provides the full set of fi
 Changing the file so that a field is set to "false" will hide that field. Fields that are set to "true" will be displayed. All fields are set to "true" by default, so omitting them from the file will result in the omitted field being displayed. You can set a section to "false" rather than turning off every field individually to remove entire sections.
 
 ## Known Issues
-Removing certain fields will remove the field, but not the field name. This seems to occur mostly in sections where multiple fields are displayed on one line.
-
-![Field name appears despite field being taken out](pictures/missing-field.png)
+See [Issues](https://github.com/twisneskie/mdEditor-profile-creation/issues) for the known list of fields and sections that don't function as expected. If you encounter any errors when using the full profile, please submit an Issue.
 
 ## Identifiers
 mdEditor uses three separate field names to represent identifier sections: "identifier", "identifierSimple", and "identifierShort".
