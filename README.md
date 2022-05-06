@@ -4,7 +4,7 @@ The full profile outline (full-profile-outline.json) provides the full set of fi
 Changing the file so that a field is set to "false" will hide that field. Fields that are set to "true" will be displayed. All fields are set to "true" by default, so omitting them from the file will result in the omitted field being displayed. You can set a section to "false" rather than turning off every field individually to remove entire sections.
 
 Access the Full Profile Outline Here:
-https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/full-profile-outline.json
+		url: https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/full-profile-outline.json
 
 # Add a profile definition to mdEditor
 1. Go to Settings/Profiles/Manage Definitions.
