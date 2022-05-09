@@ -30,13 +30,13 @@ Changing the file so that a field is set to "false" will hide that field. Fields
 
 ### Profile Definition Components
 There are a number of key components found within the profile definition.
-**identifier**: a unique identifier/name for the profile definition
-**namespace**: the scope for the identifier
-**title**: a title for the profile definition
-**description**: a description of what the profile definition should be used for
-**version**: the version number of the profile definition.
-**components**: the section of the profile definition that states which fields and sections should be hidden. This is subdivided into record (holds fields for metadata records) and dictionary (holds fields for data dictionary records).
-**nav**: this section can be used to hide or change the tool tips for sections within an edit session (e.g. Main, Metadata, Keywords). Removing a section will hide the whole tab. Changing the title or tip will change how the section is named or what the tooltip displays, respectively. This is also subdivided into record and dictionary sections.
+- **identifier**: a unique identifier/name for the profile definition
+- **namespace**: the scope for the identifier
+- **title**: a title for the profile definition
+- **description**: a description of what the profile definition should be used for
+- **version**: the version number of the profile definition.
+- **components**: the section of the profile definition that states which fields and sections should be hidden. This is subdivided into record (holds fields for metadata records) and dictionary (holds fields for data dictionary records).
+- **nav**: this section can be used to hide or change the tool tips for sections within an edit session (e.g. Main, Metadata, Keywords). Removing a section will hide the whole tab. Changing the title or tip will change how the section is named or what the tooltip displays, respectively. This is also subdivided into record and dictionary sections.
 
 ### Identifiers
 mdEditor uses three separate field names to represent identifier sections: "identifier", "identifierSimple", and "identifierShort".
