@@ -1,23 +1,36 @@
 # Creating Profiles for mdEditor
-Profiles in mdEditor are settings you can use during the metadata editing process in mdEditor to simplify data entry. They are composed of two parts: a profile definition, which determines which fields are displayed during an edit session, and a schema, which determines which fields are required. mdEditor has four built-in profiles that can be used when editing metadata: Basic, Full, Project, and Product. In addition to these built-in profiles, custom profiles can be developed and loaded into mdEditor. 
+Profiles in mdEditor are settings you can use during the metadata editing process in mdEditor to simplify data entry. They are composed of two parts: a profile definition, which determines which fields are displayed during an edit session, and a schema, which determines which fields are required. mdEditor has four built-in profiles that can be used when editing metadata: Basic, Full, Project, and Product. In addition to these built-in profiles, custom profiles can be developed and loaded into mdEditor. Profiles can be developed for metadata records and data dictionaries. It is currently not possible to develop profiles for use during contact creation.
 
+## Contents
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+- [Creating Profiles for mdEditor](#creating-profiles-for-mdeditor)
+- [Contents](#contents)
+- [Known Issues](#known-issues)
+- [Profile Definitions](#profile-definitions)
+	- [Add a profile definition to mdEditor](#add-a-profile-definition-to-mdeditor)
+	- [Add a profile to mdEditor](#add-a-profile-to-mdeditor)
+	- [Identifiers](#identifiers)
+
+<!-- /TOC -->
 ## Known Issues
 See [Issues](https://github.com/twisneskie/mdEditor-profile-creation/issues) for the known list of fields and sections that don't function as expected. If you encounter any errors when using the full profile, please submit an Issue.
 
 ## Profile Definitions
 The full profile outline (full-profile-outline.json) provides the full set of fields and sections used in creating profile definitions for the metadata creation program, mdEditor.
 
-Changing the file so that a field is set to "false" will hide that field. Fields that are set to "true" will be displayed. All fields are set to "true" by default, so omitting them from the file will result in the omitted field being displayed. You can set a section to "false" rather than turning off every field individually to remove entire sections.
+The full profile outline can be found [here](https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/full-profile-outline.json). Copy the contents of the profile definition to your preferred code editor to modify it.
 
-### Add the Full Profile Outline profile definition to mdEditor
+Changing the file so that a field is set to "false" will hide that field. Fields that are set to "true" will be displayed. All fields are set to "true" by default, so omitting them from the file will result in the omitted field being displayed. You can set a section to "false" rather than turning off every field individually to remove entire sections. See the [USFWS Alaska Region Project Profile Definition](https://raw.githubusercontent.com/twisneskie/ak-md-profiles/dev/ak-proj-profile.json) for an example of a complete profile definition.
+
+### Add a profile definition to mdEditor
 1. Go to Settings/Profiles/Manage Definitions.
 2. Select "Add Definition".
 3. Select "Imported" tab.
-3. Enter URL to profile definition: https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/full-profile-outline.json
+3. Enter URL to profile definition.
 4. Enter an optional alias (the alias replaces the definition title).
 5. Select "Save definition". You should receive a notification that the profile has been downloaded and profile information will be displayed on the tab.
 
-### Add profile for use by mdEditor
+### Add a profile to mdEditor
 1. Go to Settings/Profiles.
 2. Select "Add Profile".
 3. Enter a "Title" (displayed in profile selection field). 1. Select a "Profile Definition" from dropdown list (either the definition title or the alias entered in the previous step will be displayed). 1. And optional description (displayed when cursor hovers over "?" in the profile selection field).
