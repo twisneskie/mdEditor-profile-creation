@@ -58,6 +58,9 @@ This full profile outline sets all three types of identifier sections to "true",
 
 In nearly every instance where there is a choice between the three options, identifier will be the default (exceptions include: Taxonomy/Taxonomic System/Citation/Identifier and Documents/Identifier which both have identifierSimple as the default). The default identifier option must be set to "false" when using another identifier style, or both types of identifier options will be shown.
 
+## Schema
+JSON schema can be written to enforce content rules for metadata written in mdEditor. Schema can be used to require users to fill out fields beyond what is required, enforce conditional rules, and give custom error messages to users. I recommend the online book, [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) as a guide to the structure and rules of JSON schema.
+
 ## Adding Profiles to mdEditor
 To use a profile during metadata editing, you will need to add at least a profile definition to a profile. A profile can be used without a schema, or one or one or more schema can be attached.
 
