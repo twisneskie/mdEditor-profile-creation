@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Error Messages",
+	"description": "Shows how to implement error messages.",
+	"$id": "error-messages.json",
+	"version": "1.0.0",
+	"properties": {
+		"metadata": {
+			"properties": {
+				"resourceInfo": {
+					"properties": {
+						"status": {
+              "items": {
+                "enum": [
+                  "completed",
+                  "onGoing",
+                  "proposed",
+                  "accepted"
+                ],
+                "errorMessage": {
+                  "enum": "Project status in the 'Basic Information' section under the 'Main' tab must be one of: 'completed', 'onGoing', 'proposed', or 'accepted'"
+                }
+              }
+            }
+					}
+				}
+			}
+		}
+	}
+}

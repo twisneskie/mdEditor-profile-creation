@@ -1,0 +1,51 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Conditional Validation",
+	"description": "Require a data dictionary only if the metadata resource type is 'tabularDataset'.",
+	"$id": "require-fields.json",
+	"version": "1.0.0",
+	"properties": {
+		"metadata": {
+			"properties": {
+				"resourceInfo": {
+					"properties": {
+						"resourceType": {}
+					}
+				}
+			}
+		},
+		"dataDictionary": {}
+	},
+	"if": {
+    "properties": {
+      "metadata": {
+        "properties": {
+          "resourceInfo": {
+            "properties": {
+              "resourceType": {
+                "contains": {
+                  "properties": {
+                    "type": {
+                      "const": "tabularDataset"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "metadata",
+      "dataDictionary"
+    ]
+  },
+  "else": {
+    "required": [
+      "metadata"
+    ]
+  }
+}

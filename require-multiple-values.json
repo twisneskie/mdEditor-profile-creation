@@ -1,0 +1,48 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Require Multiple Values",
+	"description": "Makes multiple roles required for pointOfContact.",
+	"$id": "require-multiple-values.json",
+	"version": "1.0.0",
+	"properties": {
+		"metadata": {
+			"properties": {
+				"resourceInfo": {
+					"properties": {
+						"pointOfContact": {
+              "allOf": [
+                {
+                  "contains": {
+                    "properties": {
+                      "role": {
+                        "const": "pointOfContact"
+                      }
+                    }
+                  }
+                },
+                {
+                  "contains": {
+                    "properties": {
+                      "role": {
+                        "const": "custodian"
+                      }
+                    }
+                  }
+                },
+                {
+                  "contains": {
+                    "properties": {
+                      "role": {
+                        "const": "owner"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+					}
+				}
+			}
+		}
+	}
+}

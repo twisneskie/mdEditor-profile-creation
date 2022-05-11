@@ -1,0 +1,36 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Required Values",
+	"description": "Restricts allowed values for 'status' to a subset of values, restricts 'resourceType' to only allow the value of 'project'.",
+	"$id": "require-fields.json",
+	"version": "1.0.0",
+	"properties": {
+		"metadata": {
+			"properties": {
+				"resourceInfo": {
+					"properties": {
+						"status": {
+							"items": {
+								"enum":[
+									"completed",
+									"onGoing",
+									"proposed",
+									"accepted"
+								]
+							}
+						},
+						"resourceType": {
+							"items": {
+								"properties": {
+									"type": {
+										"const": "project"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
