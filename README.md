@@ -59,7 +59,21 @@ This full profile outline sets all three types of identifier sections to "true",
 In nearly every instance where there is a choice between the three options, identifier will be the default (exceptions include: Taxonomy/Taxonomic System/Citation/Identifier and Documents/Identifier which both have identifierSimple as the default). The default identifier option must be set to "false" when using another identifier style, or both types of identifier options will be shown.
 
 ## Schema
-JSON schema can be written to enforce content rules for metadata written in mdEditor. Schema can be used to require users to fill out fields beyond what is required, enforce conditional rules, and give custom error messages to users. I recommend the online book, [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) as a guide to the structure and rules of JSON schema.
+JSON schema can be written to enforce content rules for metadata written in mdEditor. Schema can be used to require users to fill out fields beyond what is required by mdJSON, enforce conditional rules, and give custom error messages to users. I recommend the online book, [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) as a guide to the structure and rules of JSON schema. I will leave instruction on JSON schemas in general to this book and the [schema specification page](https://json-schema.org/draft/2020-12/json-schema-core.html), but I will cover topics that are either specific to the mdJSON standard or issues I had difficulty finding answers to online. The mdJSON standard can be found on the [mdJSON Viewer](https://adiwg.github.io/mdTools/#viewer-page)
+
+**Important note:** Sometimes mdEditor will become non-functional upon loading an invalid schema into mdEditor. This issue can be fixed by clearing your browser cache. Because of this, I highly recommend using a separate browser for schema testing.
+
+### Parts of the schema
+**$schema**: The version of JSON schema used. It is **very important** not to use a more recent version of JSON than draft-07. I highly recommend leaving this field set to "http://json-schema.org/draft-07/schema#". Using other versions may result in mdEditor becoming non-functional upon loading the schema.
+**$id**: An identifier for the schema. External schema can be referenced using their identifier. (Note: In theory you can break a schema into many parts and pull pieces into a main schema by referencing their IDs. I have not been able to do this successfully. Please contact me if you make this work. See the mdJSON schema for reference.)
+**title**: A title for the schema.
+**description**: A description of what the schema is for.
+**version**: The version number of the schema.
+
+## Tools I have found helpful
+I create profile definitions and schema in the Atom text editor. Additionally, I have found the following packages helpful during development:
+- bracket-colorizer: colorizes brackets based on their depth. Extremely helpful for keeping track of brackets.
+- ide-json + atom-ide-ui: JSON language support and user interface. Gives errors and warnings for improperly structured JSON. Very helpful for making sure there are no missing or extra commas or brackets. These two packages should both be installed for full functionality.
 
 ## Adding Profiles to mdEditor
 To use a profile during metadata editing, you will need to add at least a profile definition to a profile. A profile can be used without a schema, or one or one or more schema can be attached.
