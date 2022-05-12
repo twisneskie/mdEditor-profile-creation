@@ -69,12 +69,12 @@ JSON schema can be written to enforce content rules for metadata written in mdEd
 **Important note:** Sometimes mdEditor will become non-functional upon loading an invalid schema into mdEditor. This issue can be fixed by clearing your browser cache. Because of this, I highly recommend using a separate browser for schema testing.
 
 ### Parts of the schema
-**$schema**: The version of JSON schema used. It is **very important** not to use a more recent version of JSON than draft-07. I highly recommend leaving this field set to "http://json-schema.org/draft-07/schema#". Using other versions may result in mdEditor becoming non-functional upon loading the schema.
-**$id**: An identifier for the schema. External schema can be referenced using their identifier. (Note: In theory you can break a schema into many parts and pull pieces into a main schema by referencing their IDs. I have not been able to do this successfully. Please contact me if you make this work. See the [mdJSON schema](https://github.com/adiwg/mdJson-schemas) for reference.)
-**title**: A title for the schema.
-**description**: A description of what the schema is for.
-**version**: The version number of the schema.
-**properties**: This can contain any of the top level properties of the mdJSON schema (i.e. schema, contact, metadata, metadataRepository, dataDictionary) that you intend to modify.
+- **$schema**: The version of JSON schema used. It is **very important** not to use a more recent version of JSON than draft-07. I highly recommend leaving this field set to "http://json-schema.org/draft-07/schema#". Using other versions may result in mdEditor becoming non-functional upon loading the schema.
+- **$id**: An identifier for the schema. External schema can be referenced using their identifier. (Note: In theory you can break a schema into many parts and pull pieces into a main schema by referencing their IDs. I have not been able to do this successfully. Please contact me if you make this work. See the [mdJSON schema](https://github.com/adiwg/mdJson-schemas) for reference.)
+- **title**: A title for the schema.
+- **description**: A description of what the schema is for.
+- **version**: The version number of the schema.
+- **properties**: This can contain any of the top level properties of the mdJSON schema (i.e. schema, contact, metadata, metadataRepository, dataDictionary) that you intend to modify.
 
 Because any custom schema are used in addition to the mdJSON schema in mdEditor, you don't need to add any parts that you do not intend to modify (e.g. you do not need to add "type": "object").
 
