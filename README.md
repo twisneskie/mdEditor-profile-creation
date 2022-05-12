@@ -13,8 +13,13 @@ Profile definitions and schema should be hosted online (i.e. on GitHub) to be us
 - [Profile Definitions](#profile-definitions)
 	- [Profile Definition Components](#profile-definition-components)
 	- [Identifiers](#identifiers)
+- [Schema](#schema)
+	- [Parts of the schema](#parts-of-the-schema)
+	- [Sample schema](#sample-schema)
+- [Tools I have found helpful](#tools-i-have-found-helpful)
 - [Adding Profiles to mdEditor](#adding-profiles-to-mdeditor)
 	- [Add a profile definition to mdEditor](#add-a-profile-definition-to-mdeditor)
+	- [Add validation schema](#add-validation-schema)
 	- [Add a profile to mdEditor](#add-a-profile-to-mdeditor)
 
 <!-- /TOC -->
@@ -65,10 +70,36 @@ JSON schema can be written to enforce content rules for metadata written in mdEd
 
 ### Parts of the schema
 **$schema**: The version of JSON schema used. It is **very important** not to use a more recent version of JSON than draft-07. I highly recommend leaving this field set to "http://json-schema.org/draft-07/schema#". Using other versions may result in mdEditor becoming non-functional upon loading the schema.
-**$id**: An identifier for the schema. External schema can be referenced using their identifier. (Note: In theory you can break a schema into many parts and pull pieces into a main schema by referencing their IDs. I have not been able to do this successfully. Please contact me if you make this work. See the mdJSON schema for reference.)
+**$id**: An identifier for the schema. External schema can be referenced using their identifier. (Note: In theory you can break a schema into many parts and pull pieces into a main schema by referencing their IDs. I have not been able to do this successfully. Please contact me if you make this work. See the [mdJSON schema](https://github.com/adiwg/mdJson-schemas) for reference.)
 **title**: A title for the schema.
 **description**: A description of what the schema is for.
 **version**: The version number of the schema.
+**properties**: This can contain any of the top level properties of the mdJSON schema (i.e. schema, contact, metadata, metadataRepository, dataDictionary) that you intend to modify.
+
+Because any custom schema are used in addition to the mdJSON schema in mdEditor, you don't need to add any parts that you do not intend to modify (e.g. you do not need to add "type": "object").
+
+### Sample schema
+The following are a selection of sample custom schemas that illustrate various things you can do within a schema. See [Josh's custom schema samples](https://jlblcc.github.io/test-schema/) for more examples.
+
+#### Require values from a limited list
+https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/enum-const.json
+Restricts allowed values for 'status' to a subset of values, restricts 'resourceType' to only allow the value of 'project'.
+
+#### Require fields
+https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/require-fields.json
+Makes 'resourceInfo' and 'metadataInfo' required properties of 'metadata'.
+
+#### Add custom error messages
+https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/error-messages.json
+Shows how to implement error messages.
+
+#### Require multiple values in an array
+https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/require-multiple-values.json
+Makes multiple roles required for pointOfContact.
+
+#### Implement conditional requirements
+https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/conditional-validation.json
+Require a data dictionary only if the metadata resource type is 'tabularDataset'.
 
 ## Tools I have found helpful
 I create profile definitions and schema in the Atom text editor. Additionally, I have found the following packages helpful during development:
@@ -85,6 +116,14 @@ To use a profile during metadata editing, you will need to add at least a profil
 3. Enter URL to profile definition.
 4. Enter an optional alias (the alias replaces the definition title).
 5. Select "Save definition". You should receive a notification that the profile has been downloaded and profile information will be displayed on the tab.
+
+### Add validation schema
+1. Go to Settings/Profiles/Validation.
+2. Select "Add Schema".
+3. Enter URL to the schema root.
+4. Enter a Title and Description.
+5. Select the record "Type" to which the schema applies.
+6. Select "Save Schema". You should receive a notification that the profile has been downloaded.
 
 ### Add a profile to mdEditor
 1. Go to Settings/Profiles.
