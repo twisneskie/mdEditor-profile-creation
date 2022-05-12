@@ -82,23 +82,23 @@ Because any custom schema are used in addition to the mdJSON schema in mdEditor,
 The following are a selection of sample custom schemas that illustrate various things you can do within a schema. See [Josh's custom schema samples](https://jlblcc.github.io/test-schema/) for more examples.
 
 #### Require values from a limited list
-https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/enum-const.json
+[https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/enum-const.json](https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/enum-const.json)
 Restricts allowed values for 'status' to a subset of values, restricts 'resourceType' to only allow the value of 'project'.
 
 #### Require fields
-https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/require-fields.json
+[https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/require-fields.json](https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/require-fields.json)
 Makes 'resourceInfo' and 'metadataInfo' required properties of 'metadata'.
 
 #### Add custom error messages
-https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/error-messages.json
+[https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/error-messages.json](https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/error-messages.json)
 Shows how to implement error messages.
 
 #### Require multiple values in an array
-https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/require-multiple-values.json
+[https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/require-multiple-values.json](https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/require-multiple-values.json)
 Makes multiple roles required for pointOfContact.
 
 #### Implement conditional requirements
-https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/conditional-validation.json
+[https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/conditional-validation.json](https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/conditional-validation.json)
 Require a data dictionary only if the metadata resource type is 'tabularDataset'.
 
 ## Tools I have found helpful
