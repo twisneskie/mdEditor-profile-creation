@@ -5,6 +5,8 @@ Profiles can be developed for metadata records and data dictionaries. It is curr
 
 Profile definitions and schema should be hosted online (i.e. on GitHub) to be used in mdEditor. Keep in mind that it may take up to 5 minutes for changes to profile definitions and schema to be reflected on mdEditor. I recommend using the profile definition or schema's version to keep track of updates.
 
+Questions or comments? Email me at theresa_wisneskie@fws.gov.
+
 ## Contents
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [Creating Profiles for mdEditor](#creating-profiles-for-mdeditor)
@@ -76,10 +78,10 @@ JSON schema can be written to enforce content rules for metadata written in mdEd
 - **version**: The version number of the schema.
 - **properties**: This can contain any of the top level properties of the mdJSON schema (i.e. schema, contact, metadata, metadataRepository, dataDictionary) that you intend to modify.
 
-Because any custom schema are used in addition to the mdJSON schema in mdEditor, you don't need to add any parts that you do not intend to modify (e.g. you do not need to add "type": "object").
+See the book [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) for information on writing schema. You should use the existing properties from [mdJSON](https://adiwg.github.io/mdTools/#viewer-page) to build your custom schema. Because any custom schema are used in addition to the mdJSON schema in mdEditor, you don't need to add anything from the original schema that you do not intend to modify (e.g. you do not need to add "type": "object" or any objects/arrays/strings/etc. that will keep their default requirements).
 
 ### Sample schema
-The following are a selection of sample custom schemas that illustrate various things you can do within a schema. See [Josh's custom schema samples](https://jlblcc.github.io/test-schema/) for more examples.
+The following are a selection of sample custom schemas that illustrate various things you can do within a schema. See [Josh's custom schema samples](https://jlblcc.github.io/test-schema/) for more examples. Also see the [USFWS Alaska Region Product Schema](https://raw.githubusercontent.com/USFWS/ak-md-profiles/dev/ak-prod-schema.json) for an example of a complete, functional custom schema.
 
 #### Require values from a limited list
 [https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/enum-const.json](https://raw.githubusercontent.com/twisneskie/mdEditor-profile-creation/main/enum-const.json)
