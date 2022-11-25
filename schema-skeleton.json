@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema Title Here",
+  "description": "Schema description here.",
+  "$id": "schema-skeleton.json",
+  "version": "1.0.0",
+  "properties": {
+    "schema": {},
+    "contact": {},
+    "metadata": {},
+    "metadataRepository": {},
+    "dataDictionary": {}
+  }
+}
