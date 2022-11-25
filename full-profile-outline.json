@@ -341,7 +341,7 @@
             "issue": true,
             "page": true
           },
-          "otherCitationDetails": {},
+          "otherCitationDetails": true,
           "graphic": {
             "fileName": true,
             "fileType": true,
